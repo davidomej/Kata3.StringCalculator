@@ -1,6 +1,6 @@
 public class StringCalculator {
 
-    public int add(String s) {
+    public int add(String s) throws Exception {
         String[] numbers = s.split("//|,|\n|;");
         int n = 0;
 
@@ -12,6 +12,10 @@ public class StringCalculator {
             n= Integer.parseInt(numbers[0])+Integer.parseInt(numbers[1]);
         }else if(numbers.length>2){
             n = Integer.parseInt(numbers[0])+ Integer.parseInt(numbers[1])+ Integer.parseInt(numbers[2]);
+        }
+
+        if(Integer.parseInt(s)<0){
+            throw new Exception("Negatives not allowed"+s);
         }
         return n;
     }
