@@ -15,4 +15,10 @@ public class StringCalculatorShould {
         StringCalculator calc = new StringCalculator();
         assertEquals(calc.add("1"), 1);
     }
+
+    @Test
+    void stringWithTwoNumbers(){
+        StringCalculator calc = new StringCalculator();
+        assertEquals(calc.add("1,2"), 3);
+    }
 }
