@@ -39,7 +39,7 @@ public class StringCalculatorShould {
     @Test
     void differentDelimitersReturnSum() throws Exception{
         StringCalculator calc = new StringCalculator();
-        assertEquals(calc.add("//;\n1,2"),3);
+        assertEquals(calc.add("//;\n1;2"),3);
     }
 
     //String = -1 or negative number return throw
